@@ -1,0 +1,27 @@
+notes:
+- the experiment is "66"
+- the name is "categoryC8"
+- 7 faces and then 1 gap.  500 ms.   4-s trial
+- was designed for [1280x800 60Hz]
+• think about stimulus size... might need to change!!
+  - probably best to try to match what we did in the paper
+- eyetracking would be nice if it doesn't take too long to get going
+
+% C8:
+% 5 pos x 5 pos x (3 tasks) = 75 stimuli [medium size faces; no more fixation grid; digit stream, dot task]
+% 75 stimuli, 25 per run. 1 run type but 4 random physical instantiations. repeated for 3 tasks, 12 runs per session
+% 756 px x 756 px resolution (as inherited from C5)
+% bank of 7view*95id = 665 faces, special ptviewmovie hack to modulate across locations
+% very special face ordering on each trial.
+% each of the 25 is presented twice in a run.
+% tasks: A - dot, B - rsvp, C - face task
+% sameness: the same dots, the same stimulus frames, the same digits!
+% approach: pre-run 4 times to get 4 physical instantiations.  and then set up the 12 runs.
+% then, physical: 123 412 341 234
+%           task: ABC ABC ABC ABC
+% so, bootgroups goes like [1 2 3 1 2 3 1 2 3 1 2 3].
+% on average, dot and face targets are 12.5 times / (30*4) = 0.104166 times per second
+% on average, roughly, digit repeat is (1/9.6)/2 times per digit frame means 1/9.6 times per second
+% NOTE: black and white digits are sometimes not visible (since dark hair). hm.
+% NOTE: face identity task is really hard (too hard?) in the periphery
+% NOTE: i thought the digit task was intensely hard.
