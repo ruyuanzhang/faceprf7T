@@ -1,3 +1,6 @@
+% Kendrick's startup file, modified by Ruyuan Zhang specifically for
+% faceprf7T project
+
 % set defaults
 set(0,'DefaultFigureInvertHardCopy','off');
 set(0,'DefaultFigurePaperPositionMode','auto');
@@ -7,8 +10,8 @@ set(0,'DefaultLineLineWidth',1);
 set(0,'DefaultLineMarkerSize',9);
 set(0,'DefaultTextFontSize',10);
 set(0,'DefaultAxesFontSize',10);
-set(0,'DefaultTextFontName','Helvetica');
-set(0,'DefaultAxesFontName','Helvetica');
+set(0,'DefaultTextFontName','Arial');
+set(0,'DefaultAxesFontName','Arial');
 %set(0,'DefaultFigureToolbar','none');
 %set(0,'DefaultFigureMenuBar','none');
 fprintf(1,'default font size: 10\n');
@@ -22,8 +25,8 @@ format long g;
 
 % define path (top is highest priority)!
 pth = '';
-pth = [pth genpath('/Users/kendrick/Dropbox/cvnlab/experiments/kendrick/knkutils')];
-pth = [pth genpath('/Applications/Psychtoolbox')];
+pth = [pth genpath(pwd)];
+
 %   % kendrick local:
 %   pth = [pth genpath('/research/code/knkutils')];
 %   pth = [pth genpath('/research/matlab/Psychtoolbox')];
@@ -41,7 +44,9 @@ end
 % add to path
 pth = pth(~isbad);
 pth = cat(2,pth{:});
-addpath(pth);
+if ~isempty(pth)
+    addpath(pth);
+end
 
 % clean up
 clear pth bad isbad p q;
