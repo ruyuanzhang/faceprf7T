@@ -8,7 +8,7 @@ ptonparams = {[1024 768 60 32],[],-1};
 ptonparams = {[],[],-1};
 
 % get utilities on path
-addpath(genpath(strrep(which('calibrate'),'calibrate.m','knkutils')));
+%addpath(genpath(strrep(which('calibrate'),'calibrate.m','knkutils')));
 
 % check calibration images 
 oldclut = pton(ptonparams{:});
