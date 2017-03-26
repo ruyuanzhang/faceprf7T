@@ -28,8 +28,8 @@ pth = '';
 pth = [pth genpath(pwd)];
 
 %   % kendrick local:
-%   pth = [pth genpath('/research/code/knkutils')];
-%   pth = [pth genpath('/research/matlab/Psychtoolbox')];
+%pth = [pth genpath('/Users/7Tuser/Desktop/cvnlab/kendrick/knkutils')];
+pth = [pth genpath('/Applications/Psychtoolbox_64bit')];
 
 % clean up path
 pth = regexp(pth,'(.+?):','match');

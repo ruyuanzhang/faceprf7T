@@ -18,7 +18,7 @@ ptonparams      = {[],[],0};
 offset          = [];
 movieflip       = [0 0];  % [1 0] is necessary for flexi mirror to show up right-side up
 %   movieflip = [0 0];
-frameduration   = 15;  %%OLD 30
+frameduration   = 15;  %%15 for 60hz, 30 for 120hz
   % .175 size, 1 ON 1 OFF, omit disc, (1/9.6)/2 will repeat (but up to 2), 3 extra entries, white/black alternation
 fixationinfo    = {{.175 [1 1] 1 -(1/9.6)/2 3 1}};  %%OLD [1 0]
 fixationsize    = 64;  % 1/12.5*800
@@ -28,11 +28,12 @@ tfunNOEYE = @() fprintf('STIMULUS STARTED.\n');
 tfunEYE = @() cat(2,fprintf('STIMULUS STARTED.\n'),Eyelink('Message','SYNCTIME'));
   % BOLDSCREEN (intentionally linear CLUT since the monitor already linearizes itself)
 
-soafun = @() round(7*(60/frameduration) + 2*(2*(rand-.5))*(60/frameduration));  % 7 +/- 2 is [5,9]
+%soafun = @() round(7*(60/frameduration) + 2*(2*(rand-.5))*(60/frameduration));  % 7 +/- 2 is [5,9],
+soafun = @() round(7*(120/frameduration) + 2*(2*(rand-.5))*(120/frameduration));  % 7 +/- 2 is [5,9]
 skiptrials      = 0;
 grayval         = uint8(161);
 con             = 100;
-trialparams     = {1/2 uint8([255 0 0]) 20 .25 -2};  %%OLD last entry 1
+trialparams     = {1/2 uint8([255 0 0]) 20 0 -2};  %%OLD last entry 1,
 
 %%%%%%%%%%%%%%%% path stuff
 

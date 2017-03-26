@@ -2,7 +2,7 @@ notes:
 - the experiment is "66"
 - the name is "categoryC8"
 - 7 faces and then 1 gap.  500 ms.   4-s trial
-- was designed for [1280x800 60Hz]
+- was designed for [1280x800 60Hz], on boldscreen in 7TAS. diameter of a stimulus should be 309 pixels
 • think about stimulus size... might need to change!!
   - probably best to try to match what we did in the paper
 - eyetracking would be nice if it doesn't take too long to get going

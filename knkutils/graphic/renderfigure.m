@@ -50,7 +50,8 @@ printnice([],[0 1],[],tmpfile);
 % convert eps to png
 if ismember(wantgray,[0 1])
   opt = choose(wantgray,'-type Grayscale','');
-  assert(unix(sprintf('convert %s.eps -scale %dx%d! %s %s.png',tmpfile,res,res,opt,tmpfile))==0);
+  assert(unix(sprintf('DYLD_LIBRARY_PATH=/opt/local/lib convert %s.eps -scale %dx%d! %s %s.png',tmpfile,res,res,opt,tmpfile))==0);
+  %assert(unix(sprintf('convert %s.eps -scale %dx%d! %s %s.png',tmpfile,res,res,opt,tmpfile))==0);
   fct = 65535;
 else
         %%%"-r72x72" -g1199x1199 
